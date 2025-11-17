@@ -55,7 +55,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Publish to NPM
-      run: npm publish --access public
+      run: |
+        if [ -z "$NODE_AUTH_TOKEN" ]; then
+          echo "Error: NPM_TOKEN secret is not configured"
+          echo "Please configure NPM_TOKEN in repository settings:"
+          echo "Settings → Secrets and variables → Actions → New repository secret"
+          exit 1
+        fi
+        npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
