@@ -1,0 +1,49 @@
+{
+  "name": "react-antd-table-ex",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An enhanced Table component based on antd Table with full height layout",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "antd",
+    "table",
+    "component"
+  ],
+  "author": "lidongr",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^5.28.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@storybook/addon-docs": "^10.0.7",
+    "@storybook/addon-onboarding": "^10.0.7",
+    "@storybook/addon-webpack5-compiler-swc": "^4.0.2",
+    "@storybook/react-webpack5": "^10.0.7",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "prop-types": "^15.8.1",
+    "rollup": "^4.53.2",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^10.0.7",
+    "typescript": "^5.9.3"
+  }
+}
