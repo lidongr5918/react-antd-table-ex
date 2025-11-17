@@ -24,6 +24,14 @@
   ],
   "author": "lidongr",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lidongr5918/react-antd-table-ex.git"
+  },
+  "homepage": "https://github.com/lidongr5918/react-antd-table-ex#readme",
+  "bugs": {
+    "url": "https://github.com/lidongr5918/react-antd-table-ex/issues"
+  },
   "dependencies": {
     "antd": "^5.28.1",
     "react": "^19.2.0",

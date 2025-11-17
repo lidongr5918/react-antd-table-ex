@@ -300,13 +300,88 @@ react-antd-table-ex/
 3. **分页器**：当 `pagination={false}` 时，组件会自动排除分页器高度
 4. **最小高度**：自动计算的高度最小值为 100px，确保表格始终可滚动
 
+## 🚀 发布
+
+### 手动发布到 NPM
+
+1. 确保你已经登录 npm：
+```bash
+npm login
+```
+
+2. 更新版本号：
+```bash
+npm version patch  # 或 minor, major
+```
+
+3. 构建项目：
+```bash
+npm run build
+```
+
+4. 发布到 npm：
+```bash
+npm publish --access public
+```
+
+### 使用 GitHub Actions 自动发布
+
+项目已配置 GitHub Actions 工作流，支持两种发布方式：
+
+#### 方式 1: 通过 GitHub Release 发布
+1. 在 GitHub 仓库中创建一个新的 Release
+2. Actions 会自动检测到 Release 事件
+3. 自动构建并发布到 npm
+
+#### 方式 2: 手动触发发布
+1. 进入 GitHub 仓库的 Actions 页面
+2. 选择 "Publish to NPM" 工作流
+3. 点击 "Run workflow"
+4. 选择版本类型（patch/minor/major）
+5. 工作流会自动：
+   - 更新版本号
+   - 构建项目
+   - 发布到 npm
+   - 创建 git tag
+
+**注意**：首次使用需要配置 NPM_TOKEN：
+1. 在 npm 上创建 Access Token：https://www.npmjs.com/settings/your-username/tokens
+2. 在 GitHub 仓库设置中添加 Secret：
+   - Settings → Secrets and variables → Actions
+   - 添加名为 `NPM_TOKEN` 的 secret，值为你的 npm token
+
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
 
+### 开发流程
+
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+### 本地开发
+
+```bash
+# 克隆项目
+git clone https://github.com/lidongr5918/react-antd-table-ex.git
+cd react-antd-table-ex
+
+# 安装依赖
+npm install
+
+# 启动 Storybook
+npm run storybook
+
+# 构建
+npm run build
+```
+
 ## 📄 许可证
 
-ISC
+ISC License - 详见 [LICENSE](LICENSE) 文件
 
 ## 🙏 致谢
 

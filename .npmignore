@@ -1,0 +1,49 @@
+# Source files (not needed in npm package)
+src/
+stories/
+.storybook/
+
+# Development files
+*.stories.tsx
+*.stories.js
+tsconfig.json
+rollup.config.js
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Documentation (optional - you might want to include README.md)
+# README.md
+
+# Build tools
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Temporary files
+*.bak
+*.tmp
+.cache/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Storybook build
+.storybook-static/
+
