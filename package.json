@@ -1,6 +1,6 @@
 {
   "name": "react-antd-table-ex",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "description": "An enhanced Table component based on antd Table with full height layout",
   "main": "dist/cjs/index.js",
